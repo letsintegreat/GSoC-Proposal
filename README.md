@@ -1,3 +1,8 @@
+<p align="center">
+<img src="https://user-images.githubusercontent.com/37345795/222436272-8b13b537-b8aa-42ba-8b05-4e042f5eb500.png" height="70px">&emsp;<img src="https://user-images.githubusercontent.com/37345795/222436327-a5e1fc68-8f85-49e1-90e7-7b6b462078e6.png" height="70px">&emsp;<img src="https://user-images.githubusercontent.com/37345795/222436519-4d5b2840-3e50-4f67-99e0-9d4da3dfd5c9.png" height="70px">
+</p>
+
+
 # [DRAFT] GSoC’23 Project Proposal / Bug Logging Tool
 
 ## Personal Details
