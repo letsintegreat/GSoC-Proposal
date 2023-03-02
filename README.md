@@ -140,7 +140,7 @@ Let us now break down everything that will be delivered by the end
 2. Redesign the issue page in order to show every piece of information we have regarding the issue.
 3. Ability to surf profiles of other users.
 4. Redesign the profile page in order to show every piece of information we have regarding the user.
-5. Use deep linking in order open specific web URLs right into the app.
+5. Use deep linking in order to open specific web URLs right into the app.
 6. Fix the report bug feature and add anonymous reporting.
 7. Dark theme!
 
@@ -205,7 +205,7 @@ The information which I aim to show -
 Because now users can also surf others’ profiles, an option to follow will also be added.
 
 
-### 5. Use deep linking in order open specific web URLs right into the app
+### 5. Use deep linking in order to open specific web URLs right into the app
 
 Once we have all the above-mentioned information right in the app, I am going to use deep linking to open links like 
 
