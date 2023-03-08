@@ -309,10 +309,16 @@ When the user is logged in, a checkbox will be shown to opt to report the bug an
 
 Isn’t this the most desired feature of any app?! Design the dark theme color scheme for the app, and implement a theme manager. Add an option to switch between themes, and store the last selected theme locally.
 
+![User Profile dark](https://user-images.githubusercontent.com/37345795/223754930-d150a625-4f61-466a-a60b-dc1109c8c5fa.png)
 
 ### Create theme_provider.dart
 
 This will store ThemeData for light and dark modes, and also the ThemeMode. We will add these themes right to the MaterialApp.
+
+
+### Update all files
+
+I need to remove every instance of hardcoded color, and replace it with a variable, so that themes can be added out of the box.
 
 
 ## 9. Cache network images locally
