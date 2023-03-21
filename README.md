@@ -161,6 +161,7 @@ Let us now break down everything that will be delivered by the end
 7. Fix the report bug feature and add anonymous reporting.
 8. Dark theme!
 9. Cache network images locally.
+10. Integrate Firebase and fcm-django to enable notifications in the flutter app.
 
 
 ## 1. Fix the screen for company details
