@@ -108,7 +108,13 @@ Below is the list of contributions I have made to **BLT.**
 17. [Fix issue with reporting bug #235](https://github.com/OWASP/BLT-Flutter/pull/235) 
 18. [Refactor start bug hunt to a new tab #238](https://github.com/OWASP/BLT-Flutter/pull/238) 
 19. [Fixed a bunch of null errors #239](https://github.com/OWASP/BLT-Flutter/pull/239) 
-
+20. [Update two images #243](https://github.com/OWASP/BLT-Flutter/pull/243) 
+21. [Schedule job to run at 12AM daily #259](https://github.com/OWASP/BLT-Flutter/pull/259) 
+22. [Add a page to change password #261](https://github.com/OWASP/BLT-Flutter/pull/261) 
+23. [Prevent changing state if the widget has been disposed #268](https://github.com/OWASP/BLT-Flutter/pull/268)
+24. [Add receiving shared intent logic #269](https://github.com/OWASP/BLT-Flutter/pull/269)
+25. [Schedule job #1166](https://github.com/OWASP/BLT/pull/1166) 
+26. [Add app screenshots #4](https://github.com/OWASP/www-project-bug-logging-tool/pull/4)
 
 ### Reported issues
 
@@ -128,6 +134,8 @@ Below is the list of contributions I have made to **BLT.**
 14. [API for domain_check #1096](https://github.com/OWASP/BLT/issues/1096) 
 15. [Bug: response of a successful POST request on `/api/v1/issues/` doesn't have screenshots field. #1102](https://github.com/OWASP/BLT/issues/1102) 
 16. [Why is start bug hunt buried in the report tab? #236](https://github.com/OWASP/BLT-Flutter/issues/236)
+17. [Add a page to change the password. #260](https://github.com/OWASP/BLT-Flutter/issues/260) 
+18. [`setState()` called after `dispose()` #267](https://github.com/OWASP/BLT-Flutter/issues/267) 
 
 
 # Project Details
@@ -287,10 +295,10 @@ in the app to show the requested information. If the user was logged in, they wi
 
 ## 6. 404 Page for mobile.
 
-As we are now opening links right in our app, it’s time to implement our cute 404 page whose design is waiting to be a part of the app for so long!
+As we are now opening links right in our app, it’s time to use our cute 404 page whose code is waiting to be a part of the app for so long!
 
 
-### Create page_404.dart
+### Update page_404.dart
 
 ![ERROR PAGE](https://user-images.githubusercontent.com/37345795/223713842-7c407e6f-1842-4a54-91ad-3f28e0b9c78c.png)
 
@@ -329,6 +337,231 @@ On every reload of the app, almost all the previously shown images are supposed 
 ### Use cached_network_image package
 
 [cached_network_image](https://pub.dev/packages/cached_network_image/) is an amazing package to our aid!
+
+
+## 10. Integrate Firebase and fcm-django to enable notifications in the flutter app
+
+Using Firebase cloud messaging, add logic to receive notifications in the flutter app.
+
+
+* Connect the flutter app with firebase, to uniquely identify each device by means of FCM Device ID.
+* Connect the backend with firebase and implement fcm-django, create routes for client devices to register/deregister themselves.
+* Create a new settings page on figma, and implement it in Flutter. The page will contain the following settings -
+    * Change password
+    * Change profile (STC)
+    * Toggle theme
+    * Notification preferences
+        * New bugs posted
+        * New bug hunts
+        * Comments (comments on issues posted by you or replies on comments posted by you)
+        * Likes on your issues
+        * List of domains subscribed
+* On the domain page, add a button to subscribe to its bugs, and add the logic on frontend and backend.
+* Add logic for sending notifications for new bugs, new bug hunts, comments, and likes to respective users in the backend.
+
+## Timeline
+
+<table>
+  <tr>
+   <td colspan="5" ><strong>Pre GSoC Period</strong>
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Before May 4</strong>
+   </td>
+   <td colspan="4" >
+<ul>
+
+<li>Learn more about deep linking. 
+
+<li>Go through the backend and get familiar with it.
+
+<li>Try to implement deep linking in a dummy project. 
+
+<li>Ask questions
+</li>
+</ul>
+   </td>
+  </tr>
+  <tr>
+   <td colspan="5" ><strong>Community Bonding Period</strong>
+   </td>
+  </tr>
+  <tr>
+   <td><strong>May 4 - May 28</strong>
+   </td>
+   <td colspan="4" >
+<ul>
+
+<li>Interact with mentors and community members.
+
+<li>Take feedback on figma designs and make changes.
+</li>
+</ul>
+   </td>
+  </tr>
+  <tr>
+   <td colspan="5" ><strong>Coding Period</strong>
+   </td>
+  </tr>
+  <tr>
+   <td><strong>May 29 - June 1</strong>
+   </td>
+   <td colspan="4" >
+<ul>
+
+<li>Fix the screen for company details.
+</li>
+</ul>
+   </td>
+  </tr>
+  <tr>
+   <td><strong>June 2 - June 15</strong>
+   </td>
+   <td colspan="4" >
+<ul>
+
+<li>Redesign the issue page in order to show every piece of information we have regarding the issue.
+</li>
+</ul>
+   </td>
+  </tr>
+  <tr>
+   <td><strong>June 16 - June 17</strong>
+   </td>
+   <td colspan="4" >
+<ul>
+
+<li>Ability to surf profiles of other users. 
+</li>
+</ul>
+   </td>
+  </tr>
+  <tr>
+   <td><strong>June 18 - June 24</strong>
+   </td>
+   <td colspan="4" >
+<ul>
+
+<li>Redesign the profile page in order to show every piece of information we have regarding the user.
+</li>
+</ul>
+   </td>
+  </tr>
+  <tr>
+   <td><strong>June 25 - June 30</strong>
+   </td>
+   <td colspan="4" >
+<ul>
+
+<li>Use deep linking in order to open specific web URLs right into the app.
+</li>
+</ul>
+   </td>
+  </tr>
+  <tr>
+   <td><strong>July 1 - July 1</strong>
+   </td>
+   <td colspan="4" >
+<ul>
+
+<li>404 Page for mobile.
+</li>
+</ul>
+   </td>
+  </tr>
+  <tr>
+   <td><strong>July 2 - July 5</strong>
+   </td>
+   <td colspan="4" >
+<ul>
+
+<li>Fix the report bug feature and add anonymous reporting.
+</li>
+</ul>
+   </td>
+  </tr>
+  <tr>
+   <td><strong>July 5 - July 13</strong>
+   </td>
+   <td colspan="4" >
+<ul>
+
+<li>Buffer week to complete any task left for midterm evaluation.
+</li>
+</ul>
+   </td>
+  </tr>
+  <tr>
+   <td colspan="5" ><strong>Evaluation Phase 1</strong>
+   </td>
+  </tr>
+  <tr>
+   <td><strong>July 14 - July 20</strong>
+   </td>
+   <td colspan="4" >
+<ul>
+
+<li>Dark theme!
+</li>
+</ul>
+   </td>
+  </tr>
+  <tr>
+   <td><strong>July 14 - July 20</strong>
+   </td>
+   <td colspan="4" >
+<ul>
+
+<li>Cache network images locally.
+</li>
+</ul>
+   </td>
+  </tr>
+  <tr>
+   <td><strong>July 21 - Aug 13</strong>
+   </td>
+   <td colspan="4" >
+<ul>
+
+<li>Integrate Firebase and fcm-django to enable notifications in the flutter app.
+</li>
+</ul>
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Aug 14 - Aug 21</strong>
+   </td>
+   <td colspan="4" >
+<ul>
+
+<li>Buffer week to complete any task left for final evaluation. 
+</li>
+</ul>
+   </td>
+  </tr>
+</table>
+
+
+
+## Deliverables
+
+### Mid-term Deliverables
+
+* Domain/Company page with functioning open and closed issues lists.
+* A redesigned issues page with every piece of information that we have.
+* Surf others’ profiles in the app.
+* A redesigned profile page with every piece of information that we have.
+* Configure and set up the app to open BLT web links right into the flutter app.
+* A beautiful 404 page for invalid web links.
+* Report bugs anonymously.
+
+
+### End-term Deliverables
+
+* Dark theme!
+* Improved performance by caching network images locally.
+* Receive notifications for multiple channels in the flutter app.
 
 
 ## Availability
