@@ -102,7 +102,7 @@ Below is the list of contributions I have made to **BLT.**
 11. [Performance optimization while reopening the app #192](https://github.com/OWASP/BLT-Flutter/pull/192)
 12. [Fix invalid score issue #195](https://github.com/OWASP/BLT-Flutter/pull/195)
 13.  [[New Feature] Check for duplicate #206](https://github.com/OWASP/BLT-Flutter/pull/206) 
-14. [Remove all instances of the last app name, changed to BLT #215](https://github.com/OWASP/BLT-Flutterpull/215) 
+14. [Remove all instances of the last app name, changed to BLT #215](https://github.com/OWASP/BLT-Flutter/pull/215) 
 15. [Add url check api for checking for duplicate #1097](https://github.com/OWASP/BLT/pull/1097) 
 16. [Add fields to response to `/api/v1/issues/` POST request #1103](https://github.com/OWASP/BLT/pull/1103) 
 17. [Fix issue with reporting bug #235](https://github.com/OWASP/BLT-Flutter/pull/235) 
