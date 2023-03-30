@@ -3,7 +3,7 @@
 </p>
 
 
-# [DRAFT] GSoC’23 Project Proposal / Bug Logging Tool
+# GSoC’23 Project Proposal / Bug Logging Tool
 
 ## Personal Details
 
@@ -157,11 +157,11 @@ Let us now break down everything that will be delivered by the end
 3. Ability to surf profiles of other users.
 4. Redesign the profile page in order to show every piece of information we have regarding the user.
 5. Use deep linking in order to open specific web URLs right into the app.
-6. 404 Page for mobile.
-7. Fix the report bug feature and add anonymous reporting.
-8. Dark theme!
-9. Cache network images locally.
-10. Integrate Firebase and fcm-django to enable notifications in the flutter app.
+6. Fix the report bug feature and add anonymous reporting.
+7. Dark theme!
+8. Cache network images locally.
+9. Integrate Firebase and fcm-django to enable notifications in the flutter app.
+10. Company side screens and integration with the backend.
 
 
 ## 1. Fix the screen for company details
@@ -294,17 +294,7 @@ Once we have all the above-mentioned information right in the app, I am going to
 in the app to show the requested information. If the user was logged in, they will also be able to interact with the pages, e.g. like a bug, follow a user. These links will also be launched in the app for non-logged-in users, but they won’t be able to interact until they log in. This feature will drastically improve UX for mobile users!
 
 
-## 6. 404 Page for mobile.
-
-As we are now opening links right in our app, it’s time to use our cute 404 page whose code is waiting to be a part of the app for so long!
-
-
-### Update page_404.dart
-
-![ERROR PAGE](https://user-images.githubusercontent.com/37345795/223713842-7c407e6f-1842-4a54-91ad-3f28e0b9c78c.png)
-
-
-## 7. Fix the report bug feature and add anonymous reporting
+## 6. Fix the report bug feature and add anonymous reporting
 
 Right now the report bug is broken in the mobile app. I aim to fix it and add an option for anonymous reporting. When the user is not logged in, the bug will automatically be reported anonymously.
 
@@ -314,7 +304,7 @@ Right now the report bug is broken in the mobile app. I aim to fix it and add an
 When the user is logged in, a checkbox will be shown to opt to report the bug anonymously, in that case, an anonymous user will be passed to the API.
 
 
-## 8. Dark theme!
+## 7. Dark theme!
 
 Isn’t this the most desired feature of any app?! Design the dark theme color scheme for the app, and implement a theme manager. Add an option to switch between themes, and store the last selected theme locally.
 
@@ -330,7 +320,7 @@ This will store ThemeData for light and dark modes, and also the ThemeMode. We w
 I need to remove every instance of hardcoded color, and replace it with a variable, so that themes can be added out of the box.
 
 
-## 9. Cache network images locally
+## 8. Cache network images locally
 
 On every reload of the app, almost all the previously shown images are supposed to be rendered again. It takes a lot of time to load all the resources. We can cache these resources locally and re use them. Load time will drop significantly and UX will be improved.
 
@@ -340,7 +330,7 @@ On every reload of the app, almost all the previously shown images are supposed 
 [cached_network_image](https://pub.dev/packages/cached_network_image/) is an amazing package to our aid!
 
 
-## 10. Integrate Firebase and fcm-django to enable notifications in the flutter app
+## 9. Integrate Firebase and fcm-django to enable notifications in the flutter app
 
 Using Firebase cloud messaging, add logic to receive notifications in the flutter app.
 
@@ -360,7 +350,47 @@ Using Firebase cloud messaging, add logic to receive notifications in the flutte
 * On the domain page, add a button to subscribe to its bugs, and add the logic on frontend and backend.
 * Add logic for sending notifications for new bugs, new bug hunts, comments, and likes to respective users in the backend.
 
+
+
+## 10. Company side screens and integration with the backend.
+
+I aim to pave the way for future contributions to create a company side of the app. I am proposing the following designs for the company side and integrations to the backend in order to lay the foundation -
+
+<img width="375" alt="Company home" src="https://user-images.githubusercontent.com/37345795/228803096-0c1e8c41-8c31-4dad-b357-fb52af9d9f20.png">
+
+<img width="375" alt="Company bugs" src="https://user-images.githubusercontent.com/37345795/228803153-4499ff18-2954-4af9-883b-ffacf04544c4.png"> <img width="375" alt="Company leaderboard" src="https://user-images.githubusercontent.com/37345795/228803168-40dae5d2-19f1-430a-92c7-9da45ddbd783.png">
+
+
+### Create company_home.dart, company_bugs.dart, and company_leaderboard.dart
+
+During my course of action, I would refine these designs on figma as per the suggestions by the mentors, and then implement them on flutter.
+
+
+### Integration with backend
+
+Only the following integrations with the backend are part of my proposal -
+
+
+* List of admins.
+* Button to add a new admin to the company.
+* Bug type tally (Bar chart)
+* List of open bugs
+* List of closed bugs
+* Entire leaderboard page
+
+
+### APIs to be created in the backend
+
+
+* Returns the list of users having admin privileges in requestee’s company
+* Grants the given user admin privileges in requestee’s company
+* Returns the list of open bugs across all the domains in the company
+* Returns the list of closed bugs across all the domains in the company
+* Returns the list of top bug hunters across all the domains in the company
+
+
 ## Timeline
+
 
 <table>
   <tr>
@@ -461,18 +491,7 @@ Using Firebase cloud messaging, add logic to receive notifications in the flutte
    </td>
   </tr>
   <tr>
-   <td><strong>July 1 - July 1</strong>
-   </td>
-   <td colspan="4" >
-<ul>
-
-<li>404 Page for mobile.
-</li>
-</ul>
-   </td>
-  </tr>
-  <tr>
-   <td><strong>July 2 - July 5</strong>
+   <td><strong>July 1 - July 5</strong>
    </td>
    <td colspan="4" >
 <ul>
@@ -489,6 +508,8 @@ Using Firebase cloud messaging, add logic to receive notifications in the flutte
 <ul>
 
 <li>Buffer week to complete any task left for midterm evaluation.
+
+<li>Start working on dark theme designs
 </li>
 </ul>
    </td>
@@ -498,7 +519,7 @@ Using Firebase cloud messaging, add logic to receive notifications in the flutte
    </td>
   </tr>
   <tr>
-   <td><strong>July 14 - July 20</strong>
+   <td><strong>July 14 - July 17</strong>
    </td>
    <td colspan="4" >
 <ul>
@@ -509,7 +530,7 @@ Using Firebase cloud messaging, add logic to receive notifications in the flutte
    </td>
   </tr>
   <tr>
-   <td><strong>July 14 - July 20</strong>
+   <td><strong>July 18 - July 20</strong>
    </td>
    <td colspan="4" >
 <ul>
@@ -520,12 +541,23 @@ Using Firebase cloud messaging, add logic to receive notifications in the flutte
    </td>
   </tr>
   <tr>
-   <td><strong>July 21 - Aug 13</strong>
+   <td><strong>July 21 - July 31</strong>
    </td>
    <td colspan="4" >
 <ul>
 
 <li>Integrate Firebase and fcm-django to enable notifications in the flutter app.
+</li>
+</ul>
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Aug 1 - Aug 13</strong>
+   </td>
+   <td colspan="4" >
+<ul>
+
+<li>Company side screens and integration with the backend.
 </li>
 </ul>
    </td>
@@ -554,7 +586,6 @@ Using Firebase cloud messaging, add logic to receive notifications in the flutte
 * Surf others’ profiles in the app.
 * A redesigned profile page with every piece of information that we have.
 * Configure and set up the app to open BLT web links right into the flutter app.
-* A beautiful 404 page for invalid web links.
 * Report bugs anonymously.
 
 
@@ -563,6 +594,7 @@ Using Firebase cloud messaging, add logic to receive notifications in the flutte
 * Dark theme!
 * Improved performance by caching network images locally.
 * Receive notifications for multiple channels in the flutter app.
+* Company side designs implemented in flutter, and integration with the backend.
 
 
 ## Availability
