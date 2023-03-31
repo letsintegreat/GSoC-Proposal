@@ -619,3 +619,4 @@ Being an open source enthusiast, completion of GSoC is not going to stop me from
 * [Figma Designs](https://www.figma.com/file/s0xuxeU6O2guoWEfA9OElZ/Design)
 * [https://owasp.org/www-community/initiatives/gsoc/gsoc2023ideas](https://owasp.org/www-community/initiatives/gsoc/gsoc2023ideas)
 * [https://owasp.org/www-community/initiatives/gsoc/gsoc_sat](https://owasp.org/www-community/initiatives/gsoc/gsoc_sat) 
+* [https://owasp.org/www-project-bug-logging-tool/](https://owasp.org/www-project-bug-logging-tool/)
