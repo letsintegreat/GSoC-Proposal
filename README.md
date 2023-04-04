@@ -89,6 +89,8 @@ Below is the list of contributions I have made to **BLT.**
 
 ### Merged pull requests
 
+
+
 1. [Add a null check on profile pic #141](https://github.com/OWASP/BLT-Flutter/pull/141)
 2. [Remember me feature #145](https://github.com/OWASP/BLT-Flutter/pull/145)
 3. [Upgrade flutter in Build and Test workflow #147](https://github.com/OWASP/BLT-Flutter/pull/147)
@@ -114,9 +116,15 @@ Below is the list of contributions I have made to **BLT.**
 23. [Prevent changing state if the widget has been disposed #268](https://github.com/OWASP/BLT-Flutter/pull/268)
 24. [Add receiving shared intent logic #269](https://github.com/OWASP/BLT-Flutter/pull/269)
 25. [Schedule job #1166](https://github.com/OWASP/BLT/pull/1166) 
-26. [Add app screenshots #4](https://github.com/OWASP/www-project-bug-logging-tool/pull/4)
+26. [Add app screenshots #4](https://github.com/OWASP/www-project-bug-logging-tool/pull/4) 
+27. [Added sentry to the project #274](https://github.com/OWASP/BLT-Flutter/pull/274) 
+28. [Contributors API #1190](https://github.com/OWASP/BLT/pull/1190)
+29. [Added contributors list in about us page #284](https://github.com/OWASP/BLT-Flutter/pull/284)  
+
 
 ### Reported issues
+
+
 
 1. ["Null check operator used on a null value" when trying to open the profile page. #140](https://github.com/OWASP/BLT-Flutter/issues/140)
 2. [Add "Remember me" option while logging in #142](https://github.com/OWASP/BLT-Flutter/issues/142)
@@ -133,9 +141,13 @@ Below is the list of contributions I have made to **BLT.**
 13. [Bug: Link is not clickable after finding a duplicate issue #1095](https://github.com/OWASP/BLT/issues/1095) 
 14. [API for domain_check #1096](https://github.com/OWASP/BLT/issues/1096) 
 15. [Bug: response of a successful POST request on `/api/v1/issues/` doesn't have screenshots field. #1102](https://github.com/OWASP/BLT/issues/1102) 
-16. [Why is start bug hunt buried in the report tab? #236](https://github.com/OWASP/BLT-Flutter/issues/236)
+16. [Why is start bug hunt buried in the report tab? #236](https://github.com/OWASP/BLT-Flutter/issues/236) 
 17. [Add a page to change the password. #260](https://github.com/OWASP/BLT-Flutter/issues/260) 
 18. [`setState()` called after `dispose()` #267](https://github.com/OWASP/BLT-Flutter/issues/267) 
+19. [Tagging issues like GitHub #276](https://github.com/OWASP/BLT-Flutter/issues/276)
+20. [Contributors Page #279](https://github.com/OWASP/BLT-Flutter/issues/279)
+21. [Design issues in Category field #283](https://github.com/OWASP/BLT-Flutter/issues/283)
+22. [Contributors data API #1189](https://github.com/OWASP/BLT/issues/1189)
 
 
 # Project Details
